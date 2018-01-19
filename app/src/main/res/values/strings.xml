@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Text1</string>
+    <string name="intro">My name is Peleg Davidson. This is the test result of my exam.</string>
+    <string name="bt">push me</string>
+    <string name="toast">Too many letters</string>
+    <string name="cnt">Character Counter:</string>
+    <string name="hint">Start typing here [max = 150 chars]</string>
+    <string name="intro2">Character Counter:</string>
+    <string name="cap">Character Counter:</string>
+    <string name="small">Character Counter:</string>
+    <string name="original">Character Counter:</string>
+    <string name="back">Character Counter:</string>
+</resources>

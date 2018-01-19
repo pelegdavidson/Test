@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro"
+        android:id="@+id/tvIntro"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tvIntro"
+        android:text="@string/bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/button" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1Cnt"
+        android:layout_below="@id/bt1"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/fieldFirstOpinion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv1Cnt"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/editext"
+        android:inputType="textMultiLine"
+        android:hint="Start typing here [max = 150 chars]"
+        android:isScrollContainer="true"
+        android:minHeight="80dp"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>
