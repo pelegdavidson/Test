@@ -5,9 +5,9 @@
     <string name="toast">Too many letters</string>
     <string name="cnt">Character Counter:</string>
     <string name="hint">Start typing here [max = 150 chars]</string>
-    <string name="intro2">Character Counter:</string>
-    <string name="cap">Character Counter:</string>
-    <string name="small">Character Counter:</string>
-    <string name="original">Character Counter:</string>
-    <string name="back">Character Counter:</string>
+    <string name="intro2">your text</string>
+    <string name="cap">cap</string>
+    <string name="small">small</string>
+    <string name="original">original</string>
+    <string name="back">back</string>
 </resources>

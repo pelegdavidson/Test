@@ -26,15 +26,14 @@ public class MainActivity extends Activity {
         bt = (Button) findViewById(R.id.bt1);
         edt = (EditText) findViewById(R.id.fieldFirstOpinion);
         tvcnt = findViewById(R.id.tv1Cnt);
-        ((EditText) findViewById(R.id.fieldFirstOpinion)).addTextChangedListener(new tw());
+        edt.addTextChangedListener(new tw());
         tvcnt.setText(getString(R.string.cnt)+edt.getText().length());
 
         findViewById(R.id.bt1).setOnClickListener(new View.OnClickListener(){
             public void onClick(View arg0) {
                 String s1 = edt.getText().toString();
                 Intent i = new Intent(MainActivity.this, ChangeActivity.class);
-                i.putExtra("origin", s1);
-                setResult(RESULT_OK, i);
+                i.putExtra("content", s1);
                 startActivityForResult(i, REGISTERCODE);
             }
         });
@@ -47,10 +46,7 @@ public class MainActivity extends Activity {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             tvcnt.setText(getString(R.string.cnt)+edt.getText().length());
-            if (edt.getText().length() == 0) {
-                edt.setEnabled(false);
-            } else
-                edt.setEnabled(true);
+            bt.setEnabled(edt.getText().length() > 0);
             if (edt.getText().length() == 150 || edt.getText().length() > 150) {
                 Toast.makeText(MainActivity.this , getString(R.string.toast), Toast.LENGTH_LONG).show();
             }
@@ -84,7 +80,7 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REGISTERCODE && resultCode == RESULT_OK){
-            edt.setText(data.getStringExtra("Changed"));
+            edt.setText(data.getStringExtra("content"));
         }
     }
 }
